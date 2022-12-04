@@ -23,6 +23,9 @@
   {% block title %}<title>ImgClass</title>{% endblock %}
   </head>
   
+
+
+
 <body>
 <form action="import_img", method="post">
    {% csrf_token %}
@@ -40,7 +43,6 @@
           <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
               <li><a class="nav-link active" href="/">Home</a></li>
-              <li><a class="nav-link" href="/Resultat/">resultat</a></li>
               
             </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -66,16 +68,34 @@
         <div class="col-4">
 
         </div>
-        
+        <div class="col-4 text-center">
+            
+            <div class="card-block table-border-style">
+                <div class="table-responsive text-nowrap">
+                    <table id="table" class="table table-striped results" style="width: 100%">
+                        <thead>
+                            <tr> 
+                                <th><b>Type d'image</b></th> 
+                                <th>Probabilité</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ type_predic_1 }}</td>
+                                <td>{{ prob_predic_1 }}</td>                   
+                            </tr>
 
-              
-            <div class="col-4 text-center">
-                <div class="form-input">
-                <div class="preview">
-                    <img id="file-ip-1-preview" name="myfile"/>
+                            <tr>
+                                <td>{{ type_predic_2 }}</td>
+                                <td>{{ prob_predic_2 }}</td>                 
+                            </tr>
+                        </tbody>
+                        
+                    </table>
                 </div>
-                 
             </div>
+
+        </div>
        
         <div class="col-4">
             
