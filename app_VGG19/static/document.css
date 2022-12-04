@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#bg{
+    background-repeat: no-repeat ;
+    background-size: 1800px 900px ;
+    background-position: top;
+    background-attachment: fixed;
+    
+}
